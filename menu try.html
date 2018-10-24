@@ -25,6 +25,29 @@
             height: 60px;
             background-color: rgba(192, 192, 192, 0.5);
         }
+        .logo{
+			height: 30px;
+            top:150px;
+            padding-left: 10px;
+        }
+        .nav-link{
+            font-size: 17px;
+            border: 1px solid rgba(192, 192, 192, 1);
+            top:4px;
+        }
+        .social{
+            position: absolute;
+            width: 100px;
+            height:50px;
+            border: 3px solid black;
+            /* left:600px;           */
+        }
+        .sections{
+            width: 100%;
+            height: 99vh;
+            background-color: red;
+            
+        }
         @media screen and (max-width: 690px){
 			.promo{
                 background-size: 300%;
@@ -46,26 +69,16 @@
                 position: fixed;
                 width: 100%;
                 height: 60px;
-                background-color: rgba(131, 129, 129, 0.5);        
+                /* background-color: rgba(131, 129, 129, 0.5);         */
+                background-color: red;
+                /* display:none; */
             }
         }
-        @media screen and (max-width: 500px) {
-			.nav-link{
-                font-size: 100px;
-                border: 1px solid rgba(192, 192, 192, 1);
-                top:4px;
+        @media screen and (max-width:500px){
+            .social    
+            {
+                display: none;
             }
-        }
-        .logo{
-			height: 30px;
-            top:150px;
-            padding-left: 10px;
-        }
-        .nav-link{
-            font-size: 20px;
-            border: 1px solid rgba(192, 192, 192, 1);
-            top:4px;
-            position: relative;
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
@@ -85,17 +98,26 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
+                    <li>
+                        <div class="social">SOCIAL <br>(to be add)</div>
+                    </li>
                 </ul>
             </nav>
         </div>
         <div class="promo"></div>
         <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
-            <h4 id="bt">Bark Together</h4>
-            <p>...</p>
-            <h4 id="about">About</h4>
-            <p>...</p>
+            <div class="sections">
+                <h4 id="bt">Bark Together</h4>
+                <p>...</p>
+            </div>
+            <div class="sections">
+                <h4 id="about">About</h4>
+                <p>...</p>
+            </div>
+            <div class="sections">    
             <h4 id="contact">Contact</h4>
             <p>...</p>
+            </div>
 
         </div>
     </div>
