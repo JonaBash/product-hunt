@@ -1,0 +1,242 @@
+        <!DOCTYPE html>
+        <html>
+
+        <head>
+            <title>🐾Doglar</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <style>
+                .promo {
+                    background-image: url(./pics/bg.jpg);
+                    background-size: 100%;
+                    background-position: center;
+                    background-attachment: fixed;
+                    background-repeat: no-repeat;
+                    width: 100%;
+                    height: 100vh;
+                }
+
+                .navbar {}
+
+                .menu {
+                    /* background-color: (0,0,0,0.1); */
+                    position: fixed;
+                    width: 100%;
+                    height: 60px;
+                    background-color: rgba(192, 192, 192, 0.5);
+                    z-index:+1;
+                }
+
+                .logo {
+                    height: 30px;
+                    top: 150px;
+                    padding-left: 10px;
+                }
+
+                .nav-link {
+                    font-size: 17px;
+                    border: 1px solid rgba(192, 192, 192, 1);
+                    top: 4px;
+                    color: aliceblue;
+                }
+
+                .social {
+                    position: absolute;
+                    width: 50%;
+                    border: 3px solid black;
+                    top:10%;
+                    left: 50%;
+
+                }
+                .socicons{
+                    display: inline-block;
+                }
+                .sections {
+                    width: 100%;
+                    height: 99vh;
+                    background-color: red;
+                    color: black;
+                }
+
+                .section1 {
+                    background-color: #fafafa;
+                    width: 100%;
+                    height: 99vh;
+                    display: flex;
+                    flex-direction: row;
+                }
+                .container {
+                    position: relative;
+                    width: 50%;
+                    height: 320px;
+                    /* margin: 5px; */
+                    margin-top: 20px;
+                }
+                .container:hover .overlay {
+                    opacity: 0.8;
+                    font-weight:500;  
+                }
+                .img1 {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 15px;
+                    right: 0;
+                    height: 100%;
+                    width: 93.5%;;
+                    opacity: 0;
+                    transition: 0.5s ease;
+                    background-color: #838383;
+                }
+                .text {
+                    color: white;
+                    font-size: 26px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                }
+                .sec1cont{
+                    background-color: #fafafa;
+                    width: 100%;
+                    height: 320px;
+                    display: flex;
+                    flex-direction: row;
+                }
+                .icons{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                @media screen and (max-width: 690px) {
+                    .promo {
+                        background-size: 300%;
+                    }
+                }
+
+                @media screen and (min-width: 690px) and (max-width: 920px) {
+                    .promo {
+                        background-size: 200%;
+                    }
+                }
+
+                @media screen and (min-width: 920px) and (max-width: 1200px) {
+                    .promo {
+                        background-size: 150%;
+                    }
+                }
+
+                @media screen and (max-width: 500px) {
+                 {
+                        display: none;
+                    } 
+                    .nav>li>a {
+                        position: relative;
+                        display: block;
+                        padding: 2px 3px;
+                    }
+                    .nav-link {
+                        font-size: 15px;
+                        border: 1px solid rgba(192, 192, 192, 1);
+                        top: 15px;
+                        color: aliceblue;
+                    }   
+                }
+            </style>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        </head>
+
+        <body style="margin: -1px">
+            <div class="navbar">
+                <div class="menu">
+                    <nav id="navbar-example2" class="navbar navbar-light bg-light">
+                        <a class="navbar-brand" href="#"><img class="logo" src="./pics/logo.png"></a>
+                        <ul class="nav nav-pills">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#bt">Bark Together</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                        <div class="social socicons">
+                             <a href="https://www.facebook.com/IsraelTechChallenge" target="_self" style="text-decoration: none;">
+                                <img class="icons" src=".pics/f.png"></a>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                            <a href="https://www.facebook.com/IsraelTechChallenge" target="_self" style="text-decoration: none;">
+                                <img class="icons" src=".pics/f.png"></a>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                            <a href="https://www.facebook.com/IsraelTechChallenge" target="_self" style="text-decoration: none;">
+                                <img class="icons" src=".pics/f.png"></a>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                            <a href="https://www.facebook.com/IsraelTechChallenge" target="_self" style="text-decoration: none;">
+                                <img class="icons" src=".pics/f.png"></a>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                            <span style="color: lightblue"><a href="https://66.media.tumblr.com/98344b33b6284e1bd148f1dfcf04866b/tumblr_paokaxjUkj1rcwn2ro1_540.gif" target="_self" style="text-decoration: none; color: lightblue">  FR</a></span>
+                        </div>
+                    </nav>
+                </div>
+                <div class="promo"></div>
+                <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+                    <div class="section1">
+                        <h4 id="bt"></h4>
+                        <div class="container">
+                            <img class="img1" src="./pics/amigos.jpg">
+                            <div class="overlay">
+                                <div class="text">Let the party started</div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <img class="img1" src="./pics/party.jpg">
+                            <div class="overlay">
+                                <div class="text">Bark together</div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <img class="img1" src="./pics/three.jpg">
+                            <div class="overlay">
+                                <div class="text">Your Dog's best friend is few clicks away</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sec1cont">
+                        <div class="icons">
+                            <img src="./pics/dogg.png">
+                            <h2>dogggggg</h2>
+                        </div>
+                        <div class="icons">
+                            <img src="./pics/phonee.png">
+                            <h2>dogggggg</h2>
+                        </div>
+                        <div class="icons">
+                            <img src="./pics/bonee.png">
+                            <h2>dogggggg</h2>
+                        </div>
+                    </div>
+                    <div class="sections">
+                        <h4 id="about">About</h4>
+                        <p>...</p>
+                    </div>
+                    <div class="sections">
+                        <h4 id="contact">Contact</h4>
+                        <p>...</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        </body>
+
+        </html>
