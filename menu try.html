@@ -16,6 +16,7 @@
             width: 100%;
             height: 100vh;
         }
+
         .navbar {}
 
         .menu {
@@ -25,47 +26,87 @@
             height: 60px;
             background-color: rgba(192, 192, 192, 0.5);
         }
-        .logo{
-			height: 30px;
-            top:150px;
+
+        .logo {
+            height: 30px;
+            top: 150px;
             padding-left: 10px;
         }
-        .nav-link{
+
+        .nav-link {
             font-size: 17px;
             border: 1px solid rgba(192, 192, 192, 1);
-            top:4px;
+            top: 4px;
             color: aliceblue;
         }
-        .social{
+
+        .social {
             position: absolute;
             width: 100px;
-            height:50px;
+            height: 50px;
             border: 3px solid black;
             /* left:600px;           */
         }
-        .sections{
+
+        .sections {
             width: 100%;
             height: 99vh;
             background-color: red;
-            
+            color: black;
         }
-        @media screen and (max-width: 690px){
-			.promo{
+
+        .section1 {
+            background-color: #fafafa;
+            width: 100%;
+            height: 99vh;
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .container {
+            /* position: relative; */
+            width: 50%;
+            height: 320px;
+            /* margin: 5px; */
+            margin-top: 20px;
+        }
+
+        .img1 {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .overlay {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: 0.5s ease;
+            background-color: #00ba8b;
+        }
+
+        @media screen and (max-width: 690px) {
+            .promo {
                 background-size: 300%;
-			}
-		}
-        @media screen and (min-width: 690px) and (max-width: 920px){
-			.promo{
-                background-size: 200%;
-			}
-		}	
-		@media screen and (min-width: 920px) and (max-width: 1200px) {
-			.promo{
-                background-size: 150%;
-			}
+            }
         }
+
+        @media screen and (min-width: 690px) and (max-width: 920px) {
+            .promo {
+                background-size: 200%;
+            }
+        }
+
+        @media screen and (min-width: 920px) and (max-width: 1200px) {
+            .promo {
+                background-size: 150%;
+            }
+        }
+
         @media screen and (max-width: 500px) {
-			.menu{
+            .menu {
                 /* background-color: (0,0,0,0.1); */
                 position: fixed;
                 width: 100%;
@@ -75,15 +116,16 @@
                 /* display:none; */
             }
         }
-        @media screen and (max-width:500px){
-            .social    
-            {
+
+        @media screen and (max-width:500px) {
+            .social {
                 display: none;
             }
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 </head>
+
 <body style="margin: -1px">
     <div class="navbar">
         <div class="menu">
@@ -107,17 +149,25 @@
         </div>
         <div class="promo"></div>
         <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
-            <div class="sections">
-                <h4 id="bt">Bark Together</h4>
-                <p>...</p>
+            <div class="section1">
+                <h4 id="bt"></h4>
+                <div class="container">
+                    <img class="img1" src="./pics/amigos.jpg">
+                </div>
+                <div class="container">
+                    <img class="img1" src="./pics/party.jpg">
+                </div>
+                <div class="container">
+                    <img class="img1" src="./pics/three.jpg">
+                </div>
             </div>
             <div class="sections">
                 <h4 id="about">About</h4>
                 <p>...</p>
             </div>
-            <div class="sections">    
-            <h4 id="contact">Contact</h4>
-            <p>...</p>
+            <div class="sections">
+                <h4 id="contact">Contact</h4>
+                <p>...</p>
             </div>
 
         </div>
