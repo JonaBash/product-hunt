@@ -65,11 +65,15 @@
         }
 
         .container {
-            /* position: relative; */
+            position: relative;
             width: 50%;
             height: 320px;
             /* margin: 5px; */
             margin-top: 20px;
+        }
+
+        .container:hover .overlay {
+            opacity: 0.8;
         }
 
         .img1 {
@@ -80,11 +84,24 @@
 
         .overlay {
             position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
             height: 100%;
             width: 100%;
             opacity: 0;
             transition: 0.5s ease;
             background-color: #00ba8b;
+        }
+
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-align: center;
         }
 
         @media screen and (max-width: 690px) {
@@ -153,12 +170,21 @@
                 <h4 id="bt"></h4>
                 <div class="container">
                     <img class="img1" src="./pics/amigos.jpg">
+                    <div class="overlay">
+                        <div class="text">Let the party started</div>
+                    </div>
                 </div>
                 <div class="container">
                     <img class="img1" src="./pics/party.jpg">
+                    <div class="overlay">
+                        <div class="text">Bark together</div>
+                    </div>
                 </div>
                 <div class="container">
                     <img class="img1" src="./pics/three.jpg">
+                    <div class="overlay">
+                        <div class="text">Your Dog's best friend is few clicks away</div>
+                    </div>
                 </div>
             </div>
             <div class="sections">
