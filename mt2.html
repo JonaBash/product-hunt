@@ -1,242 +1,358 @@
-        <!DOCTYPE html>
-        <html>
+<!DOCTYPE html>
+<html>
 
-        <head>
-            <title>🐾Doglar</title>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <meta charset="utf-8">
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-            <style>
+<head>
+    <title>🐾Doglar</title>
+    <link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        .promo {
+            background-image: url(./pics/bg.jpg);
+            background-size: 100%;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .navbar {}
+
+        .menu {
+            /* background-color: (0,0,0,0.1); */
+            position: fixed;
+            width: 100%;
+            height: 60px;
+            background-color: rgba(192, 192, 192, 0.5);
+            z-index: +1;
+        }
+
+        .logo {
+            height: 30px;
+            top: 150px;
+            padding-left: 10px;
+        }
+
+        .nav-link {
+            font-size: 17px;
+            border: 1px solid rgba(192, 192, 192, 1);
+            top: 4px;
+            color: aliceblue;
+        }
+
+        .social {
+            position: absolute;
+            width: auto%;
+            /* border: 3px solid black; */
+            top:25%;
+            height: 90%;
+            display: inline-block;
+            right:5px;
+        }
+        .socicons{
+            display: block;
+            size: 30%;
+            justify-content: center;
+            right: 0px; 
+        }
+
+        .section1 {
+            background-color: #fafafa;
+            width: 100%;
+            height: 340px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .container {
+            position: relative;
+            width: 50%;
+            height: 320px;
+            /* margin: 5px; */
+            margin-top: 20px;
+        }
+
+        .container:hover .overlay {
+            opacity: 0.8;
+            font-weight: 500;
+        }
+
+        .img1 {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 15px;
+            right: 0;
+            height: 100%;
+            width: 93.5%;
+            ;
+            opacity: 0;
+            transition: 0.5s ease;
+            background-color: #838383;
+        }
+
+        .text {
+            color: white;
+            font-size: 26px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .sec1cont {
+            background-color: white;
+            width: 100%;
+            height: 420px;
+            display: flex;
+            flex-direction: row;
+        }
+        .icons {
+            width: 450px;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            font-size: 15px;
+        }
+        .iconspic{
+            width: 110px;
+            margin-bottom: 40px;
+        }
+        .iconsoc{
+            height: 70%;
+            /* border: 1px solid black; */
+            position: center;
+            vertical-align: middle;
+        }  
+        .burger{
+            display: none;
+            position: absolute;
+            color: aliceblue;
+            width: 40px;
+            font-size: 60px;
+            top: 60%;
+            transform: translate(75%, -50%);
+            text-align: center;
+            right:15%;
+        } 
+        .btn {
+            display: inline-block;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 1.42857143;
+            text-align: center;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            border-color:none;
+
+        } 
+        .btn-default {
+            color:aliceblue;
+            background-color: transparent;
+            border-color:none;
+            margin-bottom:17px;
+            margin-left: -10px;
+        }
+        .btn-default:hover{
+            background-color: transparent;
+            border-color: transparent;
+            color: aliceblue;
+            
+        }
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: -250%;
+            z-index: 1000;
+            display: none;
+            float: left;
+            min-width: 160px;
+            padding: 7px 0;
+            margin: 2px 0 0;
+            font-size: 14px;
+            text-align: left;
+            list-style: none;
+            background-color: transparent;        
+            -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+            border: 1px solid #ccc;
+            border: 1px solid rgba(0,0,0,.15);
+            border-radius: 4px;
+            -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+            box-shadow: 0 6px 12px rgba(0,0,0,.175);
+        }
+        .dropdown-menu>li>a {
+            display: block;
+            padding: 3px 20px;
+            clear: both;
+            font-weight: 600;
+            line-height: 1.42857143;
+            color: aliceblue;
+            white-space: nowrap;
+            font-size: 15px;
+            top: 10px;
+        }
+        @media screen and (max-width: 690px) {
+            .promo {
+                background-size: 300%;
+                }
+            }
+            @media screen and (min-width: 690px) and (max-width: 920px) {
                 .promo {
-                    background-image: url(./pics/bg.jpg);
-                    background-size: 100%;
-                    background-position: center;
-                    background-attachment: fixed;
-                    background-repeat: no-repeat;
-                    width: 100%;
-                    height: 100vh;
+                    background-size: 200%;
+                    }
                 }
-
-                .navbar {}
-
-                .menu {
-                    /* background-color: (0,0,0,0.1); */
-                    position: fixed;
-                    width: 100%;
-                    height: 60px;
-                    background-color: rgba(192, 192, 192, 0.5);
-                    z-index:+1;
+            @media screen and (min-width: 920px) and (max-width: 1200px) {
+                .promo {
+                    background-size: 150%;
+                    }
                 }
-
-                .logo {
-                    height: 30px;
-                    top: 150px;
-                    padding-left: 10px;
-                }
-
-                .nav-link {
-                    font-size: 17px;
-                    border: 1px solid rgba(192, 192, 192, 1);
-                    top: 4px;
-                    color: aliceblue;
-                }
-
-                .social {
-                    position: absolute;
-                    width: 50%;
-                    border: 3px solid black;
-                    top:10%;
-                    left: 50%;
-
+            @media screen and (max-width: 660px) {
+                .burger{
+                    display: block;
                 }
                 .socicons{
-                    display: inline-block;
-                }
-                .sections {
-                    width: 100%;
-                    height: 99vh;
-                    background-color: red;
-                    color: black;
-                }
-
-                .section1 {
-                    background-color: #fafafa;
-                    width: 100%;
-                    height: 99vh;
-                    display: flex;
-                    flex-direction: row;
-                }
-                .container {
-                    position: relative;
-                    width: 50%;
-                    height: 320px;
-                    /* margin: 5px; */
-                    margin-top: 20px;
-                }
-                .container:hover .overlay {
-                    opacity: 0.8;
-                    font-weight:500;  
-                }
-                .img1 {
-                    display: block;
-                    width: 100%;
-                    height: 100%;
-                }
-                .overlay {
-                    position: absolute;
-                    top: 0;
-                    bottom: 0;
-                    left: 15px;
-                    right: 0;
-                    height: 100%;
-                    width: 93.5%;;
-                    opacity: 0;
-                    transition: 0.5s ease;
-                    background-color: #838383;
-                }
-                .text {
-                    color: white;
-                    font-size: 26px;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    -webkit-transform: translate(-50%, -50%);
-                    -ms-transform: translate(-50%, -50%);
-                    transform: translate(-50%, -50%);
-                    text-align: center;
-                }
-                .sec1cont{
-                    background-color: #fafafa;
-                    width: 100%;
-                    height: 320px;
-                    display: flex;
-                    flex-direction: row;
-                }
+                    display:none
+                } 
                 .icons{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
+                    display:none;
                 }
-
-                @media screen and (max-width: 690px) {
-                    .promo {
-                        background-size: 300%;
-                    }
+                .nav>li>a {
+                    position: relative;
+                    display: block;
+                    padding: 2px 3px;
                 }
+                .nav-link {
+                    font-size: 15px;
+                    border: 1px solid rgba(192, 192, 192, 1);
+                    top: 15px;
+                    color: aliceblue;
+                }   
+            }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+</head>
 
-                @media screen and (min-width: 690px) and (max-width: 920px) {
-                    .promo {
-                        background-size: 200%;
-                    }
-                }
-
-                @media screen and (min-width: 920px) and (max-width: 1200px) {
-                    .promo {
-                        background-size: 150%;
-                    }
-                }
-
-                @media screen and (max-width: 500px) {
-                 {
-                        display: none;
-                    } 
-                    .nav>li>a {
-                        position: relative;
-                        display: block;
-                        padding: 2px 3px;
-                    }
-                    .nav-link {
-                        font-size: 15px;
-                        border: 1px solid rgba(192, 192, 192, 1);
-                        top: 15px;
-                        color: aliceblue;
-                    }   
-                }
-            </style>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-        </head>
-
-        <body style="margin: -1px">
-            <div class="navbar">
-                <div class="menu">
-                    <nav id="navbar-example2" class="navbar navbar-light bg-light">
-                        <a class="navbar-brand" href="#"><img class="logo" src="./pics/logo.png"></a>
-                        <ul class="nav nav-pills">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#bt">Bark Together</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#about">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#contact">Contact</a>
-                            </li>
-                        </ul>
-                        <div class="social socicons">
-                             <a href="https://www.facebook.com/IsraelTechChallenge" target="_self" style="text-decoration: none;">
-                                <img class="icons" src=".pics/f.png"></a>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-                            <a href="https://www.facebook.com/IsraelTechChallenge" target="_self" style="text-decoration: none;">
-                                <img class="icons" src=".pics/f.png"></a>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-                            <a href="https://www.facebook.com/IsraelTechChallenge" target="_self" style="text-decoration: none;">
-                                <img class="icons" src=".pics/f.png"></a>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-                            <a href="https://www.facebook.com/IsraelTechChallenge" target="_self" style="text-decoration: none;">
-                                <img class="icons" src=".pics/f.png"></a>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-                            <span style="color: lightblue"><a href="https://66.media.tumblr.com/98344b33b6284e1bd148f1dfcf04866b/tumblr_paokaxjUkj1rcwn2ro1_540.gif" target="_self" style="text-decoration: none; color: lightblue">  FR</a></span>
-                        </div>
-                    </nav>
+<body style="margin: -1px; font-family:'Mali', cursive">
+    <div class="navbar">
+        <div class="menu">
+            <nav id="navbar-example2" class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#"><img class="logo" src="./pics/logo.png"></a>
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#bt">Bark Together</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <div class="social socicons">
+                    <a href="https://www.facebook.com/doglarapp" target="_blank" style="text-decoration: none;">
+                        <img class="iconsoc" src="./pics/f.png"></a>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                    <a href="https://twitter.com/DoglarApp" target="_blank" style="text-decoration: none;">
+                        <img class="iconsoc" src="./pics/instagram.png"></a>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                    <a href="https://www.instagram.com/doglar.me/" target="_blank" style="text-decoration: none;">
+                        <img class="iconsoc" src="./pics/tw.png"></a>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                    <a href="http://blog.doglar.me/en/" target="_blank" style="text-decoration: none;">
+                        <img class="iconsoc" src="./pics/blog.png">
+                    </a>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
                 </div>
-                <div class="promo"></div>
-                <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
-                    <div class="section1">
-                        <h4 id="bt"></h4>
-                        <div class="container">
-                            <img class="img1" src="./pics/amigos.jpg">
-                            <div class="overlay">
-                                <div class="text">Let the party started</div>
-                            </div>
-                        </div>
-                        <div class="container">
-                            <img class="img1" src="./pics/party.jpg">
-                            <div class="overlay">
-                                <div class="text">Bark together</div>
-                            </div>
-                        </div>
-                        <div class="container">
-                            <img class="img1" src="./pics/three.jpg">
-                            <div class="overlay">
-                                <div class="text">Your Dog's best friend is few clicks away</div>
-                            </div>
-                        </div>
+                <div class="dropdown burger">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Follow<br> us
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="https://www.facebook.com/doglarapp" target="_blank" style="text-decoration: none;">Facebook</a></li>
+                        <li><a href="https://twitter.com/DoglarApp" target="_blank" style="text-decoration: none;">Instagram</a></li>
+                        <li><a href="https://www.instagram.com/doglar.me/" target="_blank" style="text-decoration: none;">Twitter</a></li>
+                        <li><a href="http://blog.doglar.me/en/" target="_blank" style="text-decoration: none;">Blog</a></li>
+                    </ul>
+                </div>	
+            </nav>
+        </div>
+        <div class="promo"></div>
+        <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+            <div class="section1">
+                <h4 id="bt"></h4>
+                <div class="container">
+                    <img class="img1" src="./pics/amigos.jpg">
+                    <div class="overlay">
+                        <div class="text">Let the party started</div>
                     </div>
-                    <div class="sec1cont">
-                        <div class="icons">
-                            <img src="./pics/dogg.png">
-                            <h2>dogggggg</h2>
-                        </div>
-                        <div class="icons">
-                            <img src="./pics/phonee.png">
-                            <h2>dogggggg</h2>
-                        </div>
-                        <div class="icons">
-                            <img src="./pics/bonee.png">
-                            <h2>dogggggg</h2>
-                        </div>
+                </div>
+                <div class="container">
+                    <img class="img1" src="./pics/party.jpg">
+                    <div class="overlay">
+                        <div class="text">Bark together</div>
                     </div>
-                    <div class="sections">
-                        <h4 id="about">About</h4>
-                        <p>...</p>
+                </div>
+                <div class="container">
+                    <img class="img1" src="./pics/three.jpg">
+                    <div class="overlay">
+                        <div class="text">Your Dog's best friend is few clicks away</div>
                     </div>
-                    <div class="sections">
-                        <h4 id="contact">Contact</h4>
-                        <p>...</p>
-                    </div>
-
                 </div>
             </div>
+            <div class="sec1cont">
+                <div class="icons">
+                    <img class="iconspic" src="./pics/dogg.png">
+                    <!-- <h2>DOGLAR</h2> -->
+                    <p>DOGLAR is happy, social and wagging its tail.<br>
+                        It's so easy that even your dog can use it.<br> 
+                        Let`s bark together.</p>
+                </div>
+                <div class="icons">
+                    <img class="iconspic" src="./pics/phonee.png">
+                    <!-- <h2>DOGLAR</h2> -->
+                    <p>DOGLAR is a mobile application, which connects <br>
+                        dog owners.Its main purpose is to help you discover <br> 
+                        buddies for yourwalks, playmate for your dog, and other <br>
+                        people sharing the same passion. With an easy to use <br>
+                        interface, you can swipe all dog breeds, dogs, and <br>
+                        dog owners around you.</p>
+                </div>
+                <div class="icons">
+                    <img class="iconspic" src="./pics/bonee.png">
+                    <!-- <h2>DOGLAR</h2> -->
+                    <p> DOGLAR is dedicated to dog owners and their pets,<br>  
+                        telling you the nitty-gritty details associated with<br>  
+                        how to raise a healthy pup and sharing with you the <br> 
+                        trendiest parks, dog-friendly locations inthe city,<br> 
+                        and much more.</p>
+                </div>
+            </div>
+            <div class="sections">
+                <h4 id="about">About</h4>
+                <p>...</p>
+            </div>
+            <div class="sections">
+                <h4 id="contact">Contact</h4>
+                <p>...</p>
+            </div>
+
+        </div>
+    </div>
 
 
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
 
-        </html>
+</html>
