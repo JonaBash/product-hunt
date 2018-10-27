@@ -16,9 +16,33 @@
             background-repeat: no-repeat;
             width: 100%;
             height: 100vh;
+            position: relative;
         }
-
-        .navbar {}
+        .main{
+            height: 80%;
+            width: 100%;
+            /* border: 3px solid white; */
+            /* margin: 1%; */
+            position: relative;
+            top: 75px;
+        }
+        .itsa{
+            position: relative;
+            color:rgb(255, 255, 255);
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            font-size: 80px;
+            /* border: 1px solid black; */
+            text-align: center;
+            top:30%;
+        }
+        #doglar{
+            text-align: center;
+            font-size: 150px;
+        }
+        .apple {
+            width: 150px;
+            /* bottom:10%; */
+        }
 
         .menu {
             /* background-color: (0,0,0,0.1); */
@@ -61,7 +85,7 @@
         .section1 {
             background-color: #fafafa;
             width: 100%;
-            height: 340px;
+            height: auto;
             display: flex;
             flex-direction: row;
         }
@@ -69,7 +93,7 @@
         .container {
             position: relative;
             width: 50%;
-            height: 320px;
+            height: auto;
             /* margin: 5px; */
             margin-top: 20px;
         }
@@ -82,7 +106,7 @@
         .img1 {
             display: block;
             width: 100%;
-            height: 100%;
+            height: auto%;
         }
 
         .overlay {
@@ -91,9 +115,8 @@
             bottom: 0;
             left: 15px;
             right: 0;
-            height: 100%;
+            height: auto%;
             width: 93.5%;
-            ;
             opacity: 0;
             transition: 0.5s ease;
             background-color: #838383;
@@ -105,8 +128,6 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
             text-align: center;
         }
@@ -119,7 +140,7 @@
             flex-direction: row;
         }
         .icons {
-            width: 450px;
+            width: 500px;
             margin-top: 30px;
             display: flex;
             flex-direction: column;
@@ -130,13 +151,20 @@
         .iconspic{
             width: 110px;
             margin-bottom: 40px;
+            height: auto;
         }
         .iconsoc{
             height: 70%;
             /* border: 1px solid black; */
             position: center;
             vertical-align: middle;
-        }  
+        } 
+        .iconsoc2{
+            height: 35px;
+            /* border: 1px solid black; */
+            position: absolute;
+            right: 5%;
+        }   
         .burger{
             display: none;
             position: absolute;
@@ -205,47 +233,118 @@
             font-size: 15px;
             top: 10px;
         }
+        .team{
+            height: auto;
+            background-color: #838383;
+            margin: 10px;
+            text-align: center;
+            padding: 10px;
+            
+        }
+        .profile{
+            width: 30%;
+            border-radius: 50%;
+            padding-top: 5%;
+            left: 10px;
+        }
+        .profile2{
+            width: auto;
+            height: 120px;
+            /* vertical-align: middle; */
+            /* margin: 10%; */
+        }
+        .row{
+            justify-content: center;
+        } 
+        .input-group{
+            /* border: 1px solid black; */
+            left: 44%;
+        }
+        .text .input-group{
+            text-align: center;
+        }
         @media screen and (max-width: 690px) {
             .promo {
                 background-size: 300%;
                 }
             }
-            @media screen and (min-width: 690px) and (max-width: 920px) {
-                .promo {
-                    background-size: 200%;
-                    }
+        @media screen and (min-width: 690px) and (max-width: 920px) {
+            .promo {
+                background-size: 200%;
                 }
-            @media screen and (min-width: 920px) and (max-width: 1200px) {
-                .promo {
-                    background-size: 150%;
-                    }
-                }
-            @media screen and (max-width: 660px) {
-                .burger{
-                    display: block;
-                }
-                .socicons{
-                    display:none
-                } 
-                /* .icons{
-                    display:none; */
-                }
-                .nav>li>a {
-                    position: relative;
-                    display: block;
-                    padding: 2px 3px;
-                }
-                .nav-link {
-                    font-size: 15px;
-                    border: 1px solid rgba(192, 192, 192, 1);
-                    top: 15px;
-                    color: aliceblue;
-                }   
             }
+        @media screen and (min-width: 920px) and (max-width: 1200px) {
+             .promo {
+                background-size: 150%;
+                }
+             }
+        @media screen and (max-width: 795px) {
+            .burger{
+                 display: block;
+            }
+            .socicons{
+                display:none
+            } 
+            .icons {
+                width: auto;
+                margin-top: 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: left;
+                font-size: 14px;
+                /* margin-right: 10px; */
+            }           
+            .iconspic{
+                display: none;
+            }
+            .nav>li>a {
+                position: relative;
+                display: block;
+                padding: 2px 3px;
+            }
+            .nav-link {
+                font-size: 11px;
+                font-weight: bolder;
+                border: 1px solid rgba(192, 192, 192, 1);
+                top: 15px;
+                color: aliceblue;
+            } 
+            .row{
+                font-size: 10px;
+            } 
+            .profile2{
+                width: auto;
+                height: 40px;
+            } 
+            .text {
+                font-size: 12px;
+            }
+            .menu {
+                background-color: rgba(102, 102, 102, 0.8);
+            }
+            .itsa{
+            position: relative;
+            color:rgb(255, 255, 255);
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            font-size: 40px;
+            /* border: 1px solid black; */
+            text-align: center;
+            top:40%;
+            }
+            #doglar{
+            font-size: 90px;
+            }
+        }
+        @media screen and (min-width:795px) and (max-width:950px) {
+            .profile2{
+                width: auto;
+                height: 40px;
+            }
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 </head>
-
 <body style="margin: -1px; font-family:'Mali', cursive">
     <div class="navbar">
         <div class="menu">
@@ -256,7 +355,7 @@
                         <a class="nav-link" href="#bt">Bark Together</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#team">Who let the dogs out?</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -287,7 +386,19 @@
                 </div>	
             </nav>
         </div>
-        <div class="promo"></div>
+        <div class="promo">
+            <div class="main">
+                <div class="itsa">
+                    <div id="doglar">DOGLAR</div>
+                </div>
+                <div class="itsa">
+                    It's a Bark!
+                </div>
+                <div class="itsa">
+                    <a href="https://itunes.apple.com/bg/app/doglar/id1062229405?mt=8" target="_blank" style="text-decoration: none;"><img src="./pics/apple.png" class="apple"></a>
+                </div>
+            </div>                    
+        </div>
         <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
             <div class="section1">
                 <h4 id="bt"></h4>
@@ -338,19 +449,54 @@
                         and much more.</p>
                 </div>
             </div>
-            <div class="sections">
-                <h4 id="about">About</h4>
-                <p>...</p>
+            <div class="team">
+                <h4 id="team">TEAM</h4>
+				<div class="row">
+                    <div class="col-xs-4"><img src="./pics/1.png" class="profile" alt="Responsive image"></div>
+                    <div class="col-xs-4"><img src="./pics/2.jpg" class="profile" alt="Responsive image"></div>
+                    <div class="col-xs-4"><img src="./pics/3.jpeg" class="profile" alt="Responsive image"></div>					
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">Pavlina Desheva</div>
+                    <div class="col-xs-4">Bilyana Slaveykovas</div>
+                    <div class="col-xs-4">Boris Kolev</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">Co-Founder & CEO</div>
+                    <div class="col-xs-4">Co Founder & Marketing Director</div>
+                    <div class="col-xs-4">Co-Founder</div>
+                </div><br>
+                <h4 id="team">Our Partners</h4>
+                <div class="row">
+                    <div class="col-xs-6"><a href="https://petsandyou.bg/en/" target="_blank" style="text-decoration: none;"><img src="pics/par1.png" class="profile2" alt="Responsive image"></a></div>
+                    <div class="col-xs-6"><a href="https://www.poochandmutt.co.uk/" target="_blank" style="text-decoration: none;"><img src="pics/par2.jpg" class="profile2" alt="Responsive image"></a></div>
+                </div>
             </div>
             <div class="sections">
-                <h4 id="contact">Contact</h4>
-                <p>...</p>
+                <h4 id="contact"></h4>
+                <footer class="page-footer font-small special-color-dark pt-4">
+                    <div class="container2">
+                        <div class="row2">
+                            <div class="col-md-12 mb-4">
+                                <form class="input-group">
+                                    <input type="text" class="form-control form-control-sm" placeholder="Your email" aria-label="Your email" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                    <button class="btn btn-sm btn-outline-white" type="button">Sign up</button>
+                                    <a href="mailto:team@doglar.me" target="_top">
+                                        <img class="iconsoc2" src="./pics/e.png">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+                        <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a><br>
+                        By Axel Priven & Jonathan Bashan
+                    </div>
+                </footer>
             </div>
-
         </div>
     </div>
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
